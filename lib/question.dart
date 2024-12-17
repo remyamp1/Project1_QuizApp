@@ -18,7 +18,7 @@ const questions = [
     'By using XCode for iOS and Android Studio for Android',
   ]),
   QuizQuestion(
-    'What\'s the purpose of a StatefulWidget?',
+    'What is the purpose of a StatefulWidge?',
     [
       'Update UI as data changes',
       'Update data as UI changes',
