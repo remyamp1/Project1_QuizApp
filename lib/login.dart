@@ -41,6 +41,7 @@ class _LoginExampleState extends State<LoginExample> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Color.fromARGB(255, 219, 202, 248),
       body: 
       Center(
         child: Padding(
@@ -48,21 +49,34 @@ class _LoginExampleState extends State<LoginExample> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text("Username"),
-              SizedBox(height: 10),
+              SizedBox(height: 170,),
+              Text("Username",style: TextStyle(fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: Colors.black),),
+              SizedBox(height: 13),
 
-              TextField(
-               controller: usernameController,
-                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              SizedBox(
+                height: 60,
+                width: 300,
+                child: TextField(
+                 controller: usernameController,
+                  decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
               SizedBox(height: 20),
               
-              Text("Password"),
+              Text("Password",style: TextStyle(fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: Colors.black),),
               SizedBox(height: 10),
 
-              TextField(
-           controller: passwordController,
-                decoration: InputDecoration(border: OutlineInputBorder()),),
-              SizedBox(height: 30),
+              SizedBox(
+                height: 60,
+                width: 300,
+                child: TextField(
+                           controller: passwordController,
+                  decoration: InputDecoration(border: OutlineInputBorder()),),
+              ),
+              SizedBox(height: 60),
               ElevatedButton(onPressed: (){
 Navigator.push(context, MaterialPageRoute(builder: (context)=>Quiz()));
                 _login();

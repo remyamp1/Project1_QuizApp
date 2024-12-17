@@ -20,32 +20,45 @@ TextEditingController passwordController=TextEditingController();
   }
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 219, 202, 248),
       body: 
       Center(
-        child: Padding(
+         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+           child: Column(
+             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text("Username"),
-              SizedBox(height: 10),
-
-              TextField(
-       controller: usernameController,
-                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              SizedBox(height: 170),
+              Text("Username",
+              style: TextStyle(fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: Colors.black),),
+              SizedBox(height: 13),
+           
+              SizedBox(
+                height: 60,
+                width: 300,
+                child: TextField(
+                       controller: usernameController,
+                  decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
               SizedBox(height: 20),
-
-              Text("Password"),
+           
+              Text("Password",style: TextStyle(fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: Colors.black),),
               SizedBox(height: 10),
-
-              TextField
-              
-              (
-                controller: passwordController,
-                decoration: InputDecoration(border: OutlineInputBorder()),),
-              SizedBox(height: 30),
+           
+              SizedBox(
+                height: 60,
+                width: 300,
+                child: TextField(
+                  controller: passwordController,
+                  decoration: InputDecoration(border: OutlineInputBorder()),),
+              ),
+              SizedBox(height: 60),
               ElevatedButton(onPressed: (){
-
+           
                 setState(() {
                   box.put('username', usernameController.text);
                   box.put('password',passwordController.text);
@@ -53,7 +66,7 @@ TextEditingController passwordController=TextEditingController();
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginExample()));
               }, child: Text("Registration"))
             ],
-          ),
+                     ),
         ),
       ),
     );
