@@ -1,17 +1,20 @@
 
 import 'package:quizapp/quiz_question.dart';
 
-const questions = [
-  QuizQuestion(
-    'What are the main building blocks of Flutter UIs?',
-    [
+List<QuizQuestion> questions = [
+QuizQuestion(
+    "What are the main building blocks of Flutter UIs?",
+   [
       'Widgets',
       'Components',
       'Blocks',
       'Functions',
-    ],
-  ),
-  QuizQuestion('How are Flutter UIs built?', [
+    
+    ],),
+
+  
+  QuizQuestion('How are Flutter UIs built?', 
+  [
     'By combining widgets in code',
     'By combining widgets in a visual editor',
     'By defining widgets in config files',
@@ -52,5 +55,5 @@ const questions = [
       'By calling updateUI()',
       'By calling updateState()',
     ],
-  ),
+  ), 
 ];

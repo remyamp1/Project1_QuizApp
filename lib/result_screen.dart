@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 
 import 'package:quizapp/question.dart';
 import 'package:quizapp/question_summary.dart';
+import 'package:quizapp/quiz_question.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
     super.key,
     required this.chosenAnswers,
     required this.onRestart,
+    required this.questions,
   });
 
   final void Function() onRestart;
   final List<String> chosenAnswers;
-
+final List<QuizQuestion> questions;
   List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> summary = [];
 
