@@ -17,25 +17,25 @@ class QuizQuestion {
 
   //Fetch quiz questions from Firestore
 
-  static Future<List<QuizQuestion>> fetchQuestionsFromFirebase() async{
+  /*static Future<List<QuizQuestion>> fetchQuestionsFromFirebase() async{
     final snapshot = await FirebaseFirestore.instance
     .collection('quizes')
-    .get();
+    .get(); */
 
-    return snapshot.docs.map((doc){
-      final data = doc.data() as Map<String, dynamic>;
+  //  return snapshot.docs.map((doc){
+   //   final data = doc.data() as Map<String, dynamic>;
       
-      final String questionText =data['questions'] ?? ' question available';
+     /* final String questionText =data['questions'] ?? ' question available';
       final List<String> answers =(data['answers'] is List)
       ?(data['answers'] as List<dynamic>).map((answer)=> answer.toString()).toList()
-     : [' answers available'];
+     : [' answers available']; */
       
    
 
 
-      return QuizQuestion(
+     /* return QuizQuestion(
       questionText,answers
       );
-    }).toList();
-  }
+    }).toList(); */
+ // }
 }

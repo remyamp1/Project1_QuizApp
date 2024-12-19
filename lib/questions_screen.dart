@@ -14,13 +14,10 @@ class QuestionsScreen extends StatefulWidget {
 }
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
-
-
-  
   var currentQuestionIndex = 0;
-  List<QuizQuestion> questions =[];
+ // List<QuizQuestion> questions =[];
 
-  @override
+ /* @override
   void initState(){
     super.initState();
     _loadQuestions();
@@ -35,7 +32,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     } catch (e){
       print('error fetching question:$e');
     }
-  }
+  } */
 
   void answerQuestion(String selectedAnswer) {
     widget.onSelectAnswer(selectedAnswer);
@@ -67,9 +64,11 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             ),
             const SizedBox(height: 30),
             ...currentQuestion.getShuffledAnswers().map((answer) {
-              return ElevatedButton(
-                onPressed: () => answerQuestion(answer),
-                  child: Text(answer)
+              return AnswerButton(
+                text: answer,
+                  onTap: (){
+                    answerQuestion(answer);
+                  },
                 
               );
             })

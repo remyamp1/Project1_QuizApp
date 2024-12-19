@@ -41,21 +41,17 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
-    Widget screenWidget;
+    Widget screenWidget=StartScreen(switchScreen);
 
     if (activeScreen == 'questions-screen') {
       screenWidget = QuestionsScreen(onSelectAnswer: chooseAnswer);
     }
 
-    if (activeScreen == 'start-screen'){
-      screenWidget =StartScreen(switchScreen);
+    if (activeScreen == 'results-screen'){
+      screenWidget =ResultsScreen(chosenAnswers: selectedAnswers,
+       onRestart: restartQuiz,);
     }
-   else if (activeScreen == 'questions-screen') {
-    screenWidget =QuestionsScreen(onSelectAnswer: chooseAnswer);
-   } else{
-      screenWidget = ResultsScreen(chosenAnswers: selectedAnswers,
-       onRestart: restartQuiz, questions: questions);
-    }
+  
 
     // final screenWidget = activeScreen == 'start-screen'
     //     ? StartScreen(switchScreen)

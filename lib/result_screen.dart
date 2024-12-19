@@ -9,12 +9,12 @@ class ResultsScreen extends StatelessWidget {
     super.key,
     required this.chosenAnswers,
     required this.onRestart,
-    required this.questions,
+    
   });
 
   final void Function() onRestart;
   final List<String> chosenAnswers;
-final List<QuizQuestion> questions;
+
   List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> summary = [];
 
