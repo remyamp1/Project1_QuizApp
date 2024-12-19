@@ -45,19 +45,20 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 238, 232, 247),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             Container(
               height: 300,
-              width: 300,
+              width: 320,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/images/login.jpeg"),
+                      image: AssetImage("assets/images/login1.jpeg"),
                       fit: BoxFit.cover)),
             ),
-            SizedBox(height:40,),
+            SizedBox(height:60,),
             SizedBox(
                 height: 50,
                 width: 300,
@@ -76,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), label: Text("Password")),
                 )),
-            SizedBox(height:15,),
+            SizedBox(height:40,),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Quiz()));
@@ -93,8 +94,8 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: Colors.white),
                   ),
                 )),
-            SizedBox(height:10),
-            SizedBox(height:10,),
+            
+            SizedBox(height:20,),
             GestureDetector(
               onTap: () {
                 Navigator.push(

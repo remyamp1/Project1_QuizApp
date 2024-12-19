@@ -62,6 +62,7 @@ class _SignPageState extends State<SignPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       backgroundColor: Color.fromARGB(255, 233, 223, 250),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -71,10 +72,10 @@ class _SignPageState extends State<SignPage> {
               width: 400,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/images/signup.jpeg"),
+                      image: AssetImage("assets/images/sign-up.jpg"),
                       fit: BoxFit.cover)),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 60),
             SizedBox(
                 height: 50,
                 width: 300,
@@ -149,7 +150,7 @@ class _SignPageState extends State<SignPage> {
                 style: TextStyle(color: Colors.blue),
               ),
             ),
-            SizedBox(
+        /*    SizedBox(
               height: 15,
             ),
             Row(
@@ -172,7 +173,7 @@ class _SignPageState extends State<SignPage> {
                   ),
                 )
               ],
-            )
+            ) */
           ],
         ),
       ),
