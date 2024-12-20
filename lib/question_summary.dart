@@ -19,7 +19,7 @@ class QuestionsSummary extends StatelessWidget {
                   ((data['questions_index'] as int) + 1).toString(),
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 14,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -31,7 +31,7 @@ class QuestionsSummary extends StatelessWidget {
                       Text(
                         data['question'] as String,
                         style: const TextStyle(
-                          fontSize: 12,
+                          fontSize: 25,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ),
@@ -40,7 +40,7 @@ class QuestionsSummary extends StatelessWidget {
                       Text(
                         data['user_answer'] as String,
                         style: const TextStyle(
-                          fontSize: 12,
+                          fontSize: 20,
                           color: Colors.red,
                         ),
                       ),
@@ -48,7 +48,7 @@ class QuestionsSummary extends StatelessWidget {
                       Text(
                         data['correct_answer'] as String,
                         style: const TextStyle(
-                          fontSize: 12,
+                          fontSize: 20,
                           color: Colors.green,
                         ),
                       ),

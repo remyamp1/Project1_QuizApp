@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/login.dart';
 
 import 'package:quizapp/question.dart';
 import 'package:quizapp/question_summary.dart';
@@ -48,7 +49,7 @@ class ResultsScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               'You answered $numCorrectQuestions out of $numTotalQuestions questions correctly!',
               style: const TextStyle(
-                fontSize: 14,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
@@ -61,8 +62,11 @@ class ResultsScreen extends StatelessWidget {
                 foregroundColor: Colors.white,
               ),
               icon: const Icon(Icons.restart_alt),
-              onPressed: onRestart,
-              label: const Text('Restart Quiz!'),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+              },
+              label: const Text('Restart Quiz!',
+              style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
             ),
           ],
         ),
