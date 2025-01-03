@@ -46,6 +46,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
 
 
     final currentQuestion = questions[currentQuestionIndex];
+   // SizedBox(height: 10,);
     return Center(
       child: Container(
         margin: const EdgeInsets.all(40),
